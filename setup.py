@@ -442,5 +442,8 @@ else:
     os.environ["CC"] = "g++"
     os.environ["CXX"] = "g++"
 
+if platform.system() == "Windows":
+    os.environ["CFLAGS"] = "-std=c++11"
+    os.environ["CXXFLAGS"] = "-std=c++11"
 
 setup()
